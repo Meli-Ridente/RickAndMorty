@@ -1,0 +1,9 @@
+.HeaderComponent {
+  position: relative;
+  top: -150px;
+}
+
+.Links{
+  display: flex;
+  justify-content: space-around;
+}
