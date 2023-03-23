@@ -6,6 +6,7 @@ import {SearchOutlined} from '@ant-design/icons';
 import SimpleBar from 'simplebar-react';
 import 'simplebar-react/dist/simplebar.min.css';
 import { Link } from 'react-router-dom';
+import { Card, Space } from 'antd';
 
 const CharactersComponent = () => {
   const { characters } = useContext(Context)
@@ -35,12 +36,15 @@ const CharactersComponent = () => {
       </div>
 
       <div className={styles.CharactersComponent}>
-        {busqueda.map((character) => (
-          <div className={styles.Container}>
-            <Link to={`/character/${character.id}`}>{character.name}</Link>
-            <img src={character.image} width={'300px'}></img>
-            </div>
-        ))}
+        {busqueda.map(character => {
+          return(
+            <Space direction="vertical" size={16}>
+              <Card title={character.name} extra={<Link to={`/character/${character.id}`} >More</Link> }  className={styles.Card}>
+                <img src={character.image} style={{width: '100%', height: '250px', borderRadius:'10%'}}></img>
+              </Card>
+            </Space>
+          )
+        })}
       </div>
     </SimpleBar>
 )};

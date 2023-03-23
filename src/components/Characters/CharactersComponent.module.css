@@ -28,3 +28,10 @@
   margin-right: 10px;
   text-align: center;
 }
+
+.Card{
+  width: 270px;
+  height: 350px;
+  background-color: rgba(8, 24, 1, 0.514);
+  color: white;
+}

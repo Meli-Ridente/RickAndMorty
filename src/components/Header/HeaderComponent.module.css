@@ -1,9 +1,14 @@
 .HeaderComponent {
   position: relative;
-  top: -150px;
+}
+
+.Buttons{
+  top: 5px;
+  justify-content: center;
 }
 
 .Links{
-  display: flex;
-  justify-content: space-around;
+  color:#50ea00;
+  font-size: 20px;
+  text-decoration: 'none';
 }
